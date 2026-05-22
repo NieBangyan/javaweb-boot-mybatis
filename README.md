@@ -15,7 +15,7 @@ Maven 3.8+
 A Spring Boot 4.0 + MyBatis user management and file upload system.
  
 ## Project Structure
-´´´bush
+ˋˋˋbush
 javaweb-boot-03-mybatis/
 ├── src/main/java/com/woxueit/boot/
 │   ├── config/
@@ -45,7 +45,7 @@ javaweb-boot-03-mybatis/
 ├── pom.xml                             # Maven dependencies
 ├── .gitignore
 └── mvnw / mvnw.cmd                     # Maven Wrapper scripts
-´´´
+ˋˋˋ
 ## API Endpoints
 
 | Function | Method | Endpoint | Parameters | Response Format |
