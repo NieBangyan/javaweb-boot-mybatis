@@ -1,15 +1,11 @@
 # Javaweb-boot-mybatis
 
 ## Tech Stack
-Springboot 4.0.6
-
-MyBatis 4.0.1
-
-MySQL 8.0+
-
-Java 17
-
-Maven 3.8+
+### Spring Boot Version: 3.5.14
+### Starters and Dependencies:
+- Developer Tools: Lombok
+- Web: Spring Web
+- SQL: MyBatis Framework, MySQL Driver
 
 ## Project Introduction
 A Spring Boot 4.0 + MyBatis user management and file upload system.
@@ -72,13 +68,25 @@ javaweb-boot-03-mybatis
 
 ### Reason
 Wrong file path in the configuration
+
 ```bush
 mybatis.mapper-locations=classpath:com/woxueit/boot/mapper/*.xml
 ```
-It means that go to the com/woxueit/boot/mapper under the classpath to find the XML file ,but my XML should under the resources/mapper/ now, so it can not be find
+It means that look for the *com/woxueit/boot/mapper* under the classpath to find the XML file ,but my XML should under the *resources/mapper/* now, so it can not be find
+
 ### Solution
-#### 1.
+#### 1.Move the XML file
+From: *src/main/java/com/woxueit/boot/mapper/UserMapper.xml*
+To: *src/main/resources/mapper/UserMapper.xml*
 
-#### 2.
+#### 2.Modify the configuration file:
+```bush
+mybatis.mapper-locations=classpath:mapper/*.xml
+```
 
-#### 3.
+#### 3.Clean and restart
+Maven clean: Run mvn clean or click clean in the Maven panel on the right side of IDEA
+
+And then we can rerun the project
+
+
