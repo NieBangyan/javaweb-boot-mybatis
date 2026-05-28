@@ -30,8 +30,7 @@ javaweb-boot-03-mybatis
 │       │       │   ├── UploadController.java
 │       │       │   └── UserController.java
 │       │       ├── mapper/
-│       │       │   ├── UserMapper.java
-│       │       │   └── UserMapper.xml
+│       │       │   └── UserMapper.java
 │       │       ├── pojo/
 │       │       │   ├── Dept.java
 │       │       │   └── User.java
@@ -42,6 +41,7 @@ javaweb-boot-03-mybatis
 │       │       │   └── CommonResult.java
 │       │       └── JavawebBoot03MybatisApplication.java
 │       └── resources/
+|           ├── UserMapper.java
 │           ├── static/
 │           ├── templates/
 │           └── application.properties
@@ -67,9 +67,18 @@ javaweb-boot-03-mybatis
 | Upload File | POST | `/upload` | `multipart/form-data` | `CommonResult` |
 
 ## The problem I met
-#### 1.MyBatis BindingException
+### MyBatis BindingException
 <img height="200" alt="image" src="https://github.com/user-attachments/assets/f6903f4d-84ba-4cbc-b4bb-9ce3fd67f4d7" />
 
 ### Reason
-
+Wrong file path in the configuration
+```bush
+mybatis.mapper-locations=classpath:com/woxueit/boot/mapper/*.xml
+```
+It means that go to the com/woxueit/boot/mapper under the classpath to find the XML file ,but my XML should under the resources/mapper/ now, so it can not be find
 ### Solution
+#### 1.
+
+#### 2.
+
+#### 3.
