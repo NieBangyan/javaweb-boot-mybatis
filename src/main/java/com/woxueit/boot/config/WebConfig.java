@@ -20,7 +20,7 @@ public class WebConfig implements WebMvcConfigurer {
      */
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        // 自动创建目录
+        //        // 自动创建目录
         File file = new File(uploadPath);
         if (!file.exists()) {
             file.mkdirs();
